@@ -19,7 +19,14 @@ namespace src.Pages
 
         public void StandingOnPage ()
         {
-            Assert.IsTrue(resultsPageElements.GoogleIcon.Displayed);
+            try
+            {
+                Assert.IsTrue(resultsPageElements.GoogleIcon.Displayed);
+            }
+            catch(AssertionException)
+            {
+                throw new WrongPageException("Should be on Google Results page but it is on: " + Driver.Url);
+            }
         }
     }
 }

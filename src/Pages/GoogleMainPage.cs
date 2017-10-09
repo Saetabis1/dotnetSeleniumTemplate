@@ -29,7 +29,14 @@ namespace src.Pages
 
         public void StandingOnPage ()
         {
-            Assert.IsTrue(googleMainElements.GoogleIcon.Displayed);
+            try
+            {
+                Assert.IsTrue(googleMainElements.GoogleIcon.Displayed);
+            }
+            catch(AssertionException)
+            {
+                throw new WrongPageException("Should be on Google main page but it is on: " + Driver.Url);
+            }
         }
     }
 }
