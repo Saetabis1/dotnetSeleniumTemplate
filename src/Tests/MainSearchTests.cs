@@ -24,7 +24,7 @@ namespace src.Tests
 
         [Test]
         [Category("Chapter2")]
-        public void NegativeMainSearchTest()
+        public void MainSearchTest2()
         {
             var googleMainPage = new GoogleMainPage(Driver);
 
@@ -37,8 +37,6 @@ namespace src.Tests
             var googleResultsPage = new GoogleResultsPage(Driver);
 
             googleResultsPage.StandingOnPage();
-
-            //googleResultsPage.FirstResultUrlIs("www.seleniumhq.org");
         }
     }
 }
