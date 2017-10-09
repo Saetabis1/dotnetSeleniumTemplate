@@ -1,5 +1,6 @@
 namespace src.Pages
 {
+    using NUnit.Framework;
     using OpenQA.Selenium;
     using src.Elements;
 
@@ -7,13 +8,13 @@ namespace src.Pages
     {
         private IWebDriver Driver;
 
-        private GoogleMainElements googleMainElements;
-
+        private MainPageElements googleMainElements;
+        
         public GoogleMainPage(IWebDriver webDriver)
         {
             Driver = webDriver;
 
-            googleMainElements = new GoogleMainElements(Driver);
+            googleMainElements = new MainPageElements(Driver);
         }
 
         public void Navigate()
@@ -24,6 +25,11 @@ namespace src.Pages
         public void Search(string searchInput)
         {
             googleMainElements.SearchBox.SendKeys(searchInput + Keys.Enter);
+        }
+
+        public void StandingOnPage ()
+        {
+            Assert.IsTrue(googleMainElements.GoogleIcon.Displayed);
         }
     }
 }

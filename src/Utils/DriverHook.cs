@@ -31,16 +31,20 @@ namespace src.Utils
             // Can be Chrome or Firefox
             var browser = configuration["browser"];
 
+            var binPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            
             switch (server)
             {
                 case "Local":
                     switch (browser)
                     {
                         case "Chrome":
-                            Driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                            Driver = new ChromeDriver(binPath);
                             break;
                         case "Firefox":
-                            Driver = new FirefoxDriver();
+                            var service = FirefoxDriverService.CreateDefaultService(binPath);
+                            service.FirefoxBinaryPath = @"C:\Users\mmarcatilli\AppData\Local\Mozilla Firefox\firefox.exe";
+                            Driver = new FirefoxDriver(service);
                             break;
                         default:
                             throw new WrongParameterException($"Parameter Browser is wrong. It has to be 'Chrome' or 'Firefox' and it was {browser}");
@@ -57,7 +61,6 @@ namespace src.Utils
                 default:
                     throw new WrongParameterException($"Parameter Server is wrong. It has to be 'Local' or 'remote' and it was {server}");
             }
-
         }       
     }
 }

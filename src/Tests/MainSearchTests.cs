@@ -8,6 +8,7 @@ namespace src.Tests
     using src.Pages;
 
     [TestFixture]
+    [Parallelizable(ParallelScope.Children)]
     public class MainSearchTests : DriverHook
     {
         [Test]
@@ -29,7 +30,15 @@ namespace src.Tests
 
             googleMainPage.Navigate();
 
+            googleMainPage.StandingOnPage();
+
             googleMainPage.Search("Selenium");
+
+            var googleResultsPage = new GoogleResultsPage(Driver);
+
+            googleResultsPage.StandingOnPage();
+
+            //Assert.IsTrue(googleResultsPage.FirstResultUrlIs("www.seleniumhq.org"));
         }
     }
 }
