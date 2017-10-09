@@ -38,7 +38,7 @@ namespace src.Tests
 
             googleResultsPage.StandingOnPage();
 
-            //Assert.IsTrue(googleResultsPage.FirstResultUrlIs("www.seleniumhq.org"));
+            //googleResultsPage.FirstResultUrlIs("www.seleniumhq.org");
         }
     }
 }
