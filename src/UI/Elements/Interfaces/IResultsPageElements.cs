@@ -5,7 +5,7 @@ namespace src.Elements.Interfaces
 
     public interface IResultsPageElements 
     {
-        IWebElement GoogleIcon {get;}
+        IWebElement UpperSearchTextbox {get;}
         IList<IWebElement> Results {get;}
 
         string ResultsCount {get;}

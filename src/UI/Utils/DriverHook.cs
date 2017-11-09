@@ -1,5 +1,6 @@
 namespace src.Utils
 {
+    using System;
     using System.IO;
     using System.Reflection;
     using Microsoft.Extensions.Configuration;
@@ -7,6 +8,7 @@ namespace src.Utils
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
+    using OpenQA.Selenium.Remote;
 
     public class DriverHook
     {
@@ -54,7 +56,13 @@ namespace src.Utils
                     switch (browser)
                     {
                          case "Chrome":
-                            
+                            var chromeOptions = new ChromeOptions();
+
+                            chromeOptions.AddArgument("start-maximized");
+
+                            var cap = chromeOptions.ToCapabilities();
+
+                            Driver = new RemoteWebDriver(new Uri("http://localhost:32768/wd/hub"), cap); 
                         break;
                     }
                     break;
