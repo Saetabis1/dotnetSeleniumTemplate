@@ -19,9 +19,9 @@ namespace src.Elements
             get { return Driver.FindElement(By.Id("")).Text;}
         }
 
-        public IWebElement GoogleIcon
+        public IWebElement UpperSearchTextbox
         {
-            get { return Driver.FindElement(By.Id("logo"));}
+            get { return Driver.FindElement(By.Id("sfdiv"));}
         }
 
         public IList<IWebElement> Results

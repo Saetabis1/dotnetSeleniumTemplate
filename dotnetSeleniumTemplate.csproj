@@ -9,8 +9,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
     <PackageReference Include="NUnit" Version="3.8.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
-    <PackageReference Include="Selenium.Chrome.WebDriver" Version="2.32" />
-    <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.19.0" />
     <PackageReference Include="Selenium.Support" Version="3.6.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.6.0" />
     <PackageReference Include="System.Security.Permissions" Version="4.4.0" />
@@ -18,5 +16,9 @@
 
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
   <None Update="config.json" CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
+
+  <ItemGroup>
+  <None Update="src/Data/UserDataSet/*.json" CopyToOutputDirectory="PreserveNewest" />
 </ItemGroup>
 </Project>

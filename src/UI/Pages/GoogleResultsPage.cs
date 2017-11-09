@@ -21,7 +21,7 @@ namespace src.Pages
         {
             try
             {
-                Assert.IsTrue(resultsPageElements.GoogleIcon.Displayed);
+                Assert.IsTrue(resultsPageElements.UpperSearchTextbox.Displayed);
             }
             catch(AssertionException)
             {

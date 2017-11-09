@@ -9,22 +9,12 @@ namespace src.Tests
 
     [TestFixture]
     [Parallelizable(ParallelScope.Children)]
-    public class MainSearchTests : DriverHook
+    public class SeleniumTest : DriverHook
     {
+        // Simple Test to show how we use Page Objects Models With Selenium        
         [Test]
         [Category("Chapter1")]
-        public void MainSearchTest()
-        {
-            var googleMainPage = new GoogleMainPage(Driver);
-
-            googleMainPage.Navigate();
-
-            googleMainPage.Search("Selenium");
-        }
-
-        [Test]
-        [Category("Chapter2")]
-        public void MainSearchTest2()
+        public void GoogleMainSearchTest()
         {
             var googleMainPage = new GoogleMainPage(Driver);
 
