@@ -1,12 +1,10 @@
 namespace src.Tests
 {
     using NUnit.Framework;
-    using OpenQA.Selenium.Chrome;
     using System.IO;
     using System.Reflection;
-    using src.Pages;
-    using src.Models;
     using Newtonsoft.Json;
+    using src.Models;
 
     [TestFixture]
     public class JsonConverterTest 
