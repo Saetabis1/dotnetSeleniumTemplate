@@ -54,15 +54,18 @@ namespace src.Utils
                     break;
                 case "Remote":
                     switch (browser)
-                    {
-                         case "Chrome":
+                    { 
+                        case "Chrome":
                             var chromeOptions = new ChromeOptions();
 
                             chromeOptions.AddArgument("start-maximized");
 
                             var cap = chromeOptions.ToCapabilities();
 
-                            Driver = new RemoteWebDriver(new Uri("http://localhost:32768/wd/hub"), cap); 
+                            Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), cap); 
+                        break;
+                        case "Firefox":
+
                         break;
                     }
                     break;
