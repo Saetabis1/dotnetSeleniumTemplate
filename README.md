@@ -2,6 +2,10 @@
 A ready to roll template to start testing systems
 
 ## Install net core
+    # https://www.microsoft.com/net/learn/get-started/windows
+    # https://www.microsoft.com/net/learn/get-started/linuxubuntu
+    # https://www.microsoft.com/net/learn/get-started/macos 
+## Install Visual Studio Code (Or use IDE of preference)
     # https://code.visualstudio.com/
 ## Install Docker
     # https://www.docker.com/get-docker
