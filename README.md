@@ -1,5 +1,5 @@
 # dotnetSeleniumTemplate
-A ready to roll template to start testing UI applications
+A ready to roll template to start testing systems
 
 ## Install net core
     ### https://code.visualstudio.com/
@@ -15,5 +15,11 @@ A ready to roll template to start testing UI applications
 ## Run tests
     ### Stand in dotnetSeleniumTemplate folder in any terminal
     ### Type 'dotnet test' and hit enter
+    ### If you want to run only one you can use dote 'dotnet test --filter "TestCategory = yourCategory"'
 
-To run them you just have to use a plain 'dotnet test', if you want to run only one you can use dote 'dotnet test --filter "TestCategory = yourCategory"'
+## Soon
+    # Support Webservices Tests
+    # Support Backend connections
+        ## SQL
+        ## NOSQL
+        ## Solr / ELK
