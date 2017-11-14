@@ -63,3 +63,4 @@ A ready to roll template to start testing systems
         ## SQL
         ## NOSQL
         ## Solr / ELK
+        ## Logger
