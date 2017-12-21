@@ -53,6 +53,7 @@ namespace src.Utils
                     }
                     break;
                 case "Remote":
+                    var seleniumHubUrl = configuration["seleniumHubUrl"];
                     switch (browser)
                     { 
                         case "Chrome":
@@ -62,7 +63,7 @@ namespace src.Utils
 
                             var cap = chromeOptions.ToCapabilities();
 
-                            Driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), cap); 
+                            Driver = new RemoteWebDriver(new Uri(seleniumHubUrl), cap); 
                         break;
                         case "Firefox":
 
