@@ -20,15 +20,11 @@ namespace src.Utils
 
         public DriverHook()
         {
-            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("config.json");
-
-            var configuration = builder.Build();
-
-            // Can be Local or Remote
-            var server = configuration["server"];
+       // Can be Local or Remote
+            var server = Configuration.Get["server"];
             
             // Can be Chrome or Firefox
-            var browser = configuration["browser"];
+            var browser = Configuration.Get["browser"];
 
             var binPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             
@@ -50,7 +46,7 @@ namespace src.Utils
                     }
                     break;
                 case "Remote":
-                    var seleniumHubUrl = configuration["seleniumHubUrl"];
+                    var seleniumHubUrl = Configuration.Get["seleniumHubUrl"];
                     switch (browser)
                     { 
                         case "Chrome":
