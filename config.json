@@ -2,5 +2,6 @@
     "browser": "Chrome",
     "server": "Remote",
     "seleniumHubUrl": "http://localhost:4444/wd/hub",
-    "twitterEndpoint": "https://api.twitter.com/1.1"
+    "TwitterBaseUrl": "https://api.twitter.com/1.1",
+    "TwitterStatusResource": "/statuses"
 }
