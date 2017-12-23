@@ -1,4 +1,5 @@
 {
     "browser": "Chrome",
-    "server": "Remote"
+    "server": "Remote",
+    "seleniumHubUrl": "http://localhost:4444/wd/hub"
 }

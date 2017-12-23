@@ -1,8 +1,9 @@
 namespace src.Pages
 {
-    using NUnit.Framework;
     using OpenQA.Selenium;
     using src.Elements;
+    using Xunit;
+    using Xunit.Sdk;
 
     public class GoogleResultsPage
     {
@@ -21,9 +22,9 @@ namespace src.Pages
         {
             try
             {
-                Assert.IsTrue(resultsPageElements.UpperSearchTextbox.Displayed);
+                Assert.True(resultsPageElements.UpperSearchTextbox.Displayed);
             }
-            catch(AssertionException)
+            catch(TrueException)
             {
                 throw new WrongPageException("Should be on Google Results page but it is on: " + Driver.Url);
             }
