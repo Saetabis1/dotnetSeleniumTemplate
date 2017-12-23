@@ -1,8 +1,9 @@
 namespace src.Pages
 {
-    using NUnit.Framework;
     using OpenQA.Selenium;
     using src.Elements;
+    using Xunit;
+    using Xunit.Sdk;
 
     public class GoogleMainPage
     {
@@ -31,9 +32,9 @@ namespace src.Pages
         {
             try
             {
-                Assert.IsTrue(googleMainElements.GoogleIcon.Displayed);
+                Assert.True(googleMainElements.GoogleIcon.Displayed);
             }
-            catch(AssertionException)
+            catch(TrueException)
             {
                 throw new WrongPageException("Should be on Google main page but it is on: " + Driver.Url);
             }

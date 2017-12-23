@@ -4,7 +4,6 @@ namespace src.Utils
     using System.IO;
     using System.Reflection;
     using Microsoft.Extensions.Configuration;
-    using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
@@ -14,14 +13,12 @@ namespace src.Utils
     {
         public IWebDriver Driver;
 
-        [TearDown]
         public void DriverHookTearDown()
         {
             Driver.Quit();
         }
 
-        [SetUp]
-        public void DriverHookSetup()
+        public DriverHook()
         {
             var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("config.json");
 
