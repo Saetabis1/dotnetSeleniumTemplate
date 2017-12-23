@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="RestAssured" Version="0.1.9.0" />
     <PackageReference Include="Selenium.Support" Version="3.6.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.6.0" />
     <PackageReference Include="System.Security.Permissions" Version="4.4.0" />
